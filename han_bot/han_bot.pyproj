@@ -22,23 +22,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Admin\__init__.py" />
-    <Compile Include="Excl\NewFolder1\__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Excl\__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Option\__init__.py" />
     <Compile Include="setup.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Token\Token.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Token\__init__.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Excl\" />
-    <Folder Include="Excl\NewFolder1\" />
-    <Folder Include="Admin\" />
-    <Folder Include="token\" />
+    <Folder Include="Token\" />
     <Folder Include="Option\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
