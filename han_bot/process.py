@@ -2,10 +2,11 @@ import discord
 import asyncio
 import han_info
 
-info = han_info.han();
+info = han_info.HAN();
+
 
 # 반환형태는 무조건 임베드
-def han_process(message) :
+def han_process(message):
     msg = message.content
     msg = msg.replace("한이야", "")
     msg = msg.replace("한이", "")
@@ -19,6 +20,6 @@ def han_process(message) :
     if msg[:3] == "도움말":
         return info.help()
     if msg[:2] == "서버" or msg[:4] == "서버":
-        return han_info.han.url
+        return info.han.url
 
     return None

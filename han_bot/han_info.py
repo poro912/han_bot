@@ -1,16 +1,18 @@
 import discord
 
-class han:
+
+class HAN:
     # 서버 url
     # 이미지 url
     # 퍼스널 컬러
     # 버전
     url = "https://discord.gg/6NdvzzPRAU"
     image = "https://cdn.discordapp.com/attachments/810130135437017088/810374859028824096/123_20210214135940.png"
-    color = 0xAAAFFF
+    color = 0x70ABE1
     version = "beta 1.0"
 
     _line = "**--------------------------------------**"
+
     def __init__(self):
         pass
 
@@ -26,7 +28,7 @@ class han:
         embed.add_field(name="사용 언어", value="Python 3.8", inline=True)
         embed.add_field(name="상세 정보", value=self._line, inline=False)
         embed.add_field(name="봇 이름", value="한(HAN)", inline=True)
-        embed.add_field(name="봇 버전", value=self.ver, inline=True)
+        embed.add_field(name="봇 버전", value=self.version, inline=True)
         embed.set_footer(text="한이 봇의 저작권은 Han 개발진에게 있음을 알립니다.")
         embed.set_thumbnail(url=self.image)
         return embed
@@ -42,7 +44,7 @@ class han:
         return embed
 
     def help(self):
-        # 한이의 명령 목록을 임베드 형태로 반환.
+        # 한이의 명령 목록을 임베드 형태로 반환
         embed = discord.Embed(title="명령어 목록", description="나랑 대화 하고 놀려면 명령어 정도는 알아야겠지~? \n여기 도움말이야!", color=self.color)
         embed.add_field(name="- 한이야 [A]",
                         value="**``한이야 [A]``**는 나랑 소통하기 위한 기본 **접두사**!\n"
