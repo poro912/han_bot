@@ -58,6 +58,11 @@ async def on_message(message):
         except:
             await message.channel.send("그건 없는 명령이야")
         return
+    if message.content.startswith("같이 놀사람"):
+        await message.channel.send("난 대화만 할랭😜")
+        return
+    if message.content.startswith("admin"):
+        pass
 
 
 Token.set_token()

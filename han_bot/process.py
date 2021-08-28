@@ -19,7 +19,8 @@ def han_process(message):
         return info.info()
     if msg[:3] == "도움말":
         return info.help()
-    if msg[:2] == "서버" or msg[:4] == "서버":
+    if msg[:4] == "디스코드" or msg[:4] == "링크주소":
         return info.han.url
-
+    if msg[:3] == "배우자":
+        pass
     return None
