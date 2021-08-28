@@ -6,7 +6,7 @@ class HAN:
     # 이미지 url
     # 퍼스널 컬러
     # 버전
-    url = "https://discord.gg/6NdvzzPRAU"
+    url = "https://discord.gg/YKnrnffqEP"
     image = "https://cdn.discordapp.com/attachments/810130135437017088/810374859028824096/123_20210214135940.png"
     color = 0x70ABE1
     version = "beta 1.0"
@@ -20,7 +20,7 @@ class HAN:
         # 한이 개발 정보를 임베드 형태로 변환
         embed = discord.Embed(title="한이 프로필", description="내 정보들을 알려줄게!\n", color=self.color)
         embed.add_field(name="개발자", value=self._line, inline=False)
-        embed.add_field(name="코딩", value="**포로(주, 최적화)**\n**빼액(보조, 아이디어)**", inline=True)
+        embed.add_field(name="코딩", value="**포로(주, 최적화)**\n**에브(보조, 아이디어)**", inline=True)
         embed.add_field(name="일러스트", value="**사과머리(현 서버 아이콘, 봇 프로필)**\n설하(서버 아이콘)\n베루니아(봇 프로필)", inline=True)
         embed.add_field(name="도움", value="! ReadyTxT(몇몇 기능, 웹사이트)", inline=False)
         embed.add_field(name="제작일", value="2021년 1월 14일", inline=True)
