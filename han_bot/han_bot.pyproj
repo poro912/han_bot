@@ -33,6 +33,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Excel\" />
+    <Folder Include="Emoji\" />
     <Folder Include="Token\" />
     <Folder Include="Option\" />
   </ItemGroup>
