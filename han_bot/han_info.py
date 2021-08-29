@@ -7,7 +7,7 @@ class HAN:
     # 퍼스널 컬러
     # 버전
     url = "https://discord.gg/6NdvzzPRAU"
-    image = "https://cdn.discordapp.com/attachments/810130135437017088/810374859028824096/123_20210214135940.png"
+    image = "https://media.discordapp.net/attachments/869887087959216168/881478475410718721/68.png?width=676&height=676"
     color = 0x70ABE1
     version = "beta 1.0"
 
