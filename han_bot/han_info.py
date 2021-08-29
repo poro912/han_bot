@@ -29,7 +29,7 @@ class HAN:
         embed.add_field(name="상세 정보", value=self._line, inline=False)
         embed.add_field(name="봇 이름", value="한(HAN)", inline=True)
         embed.add_field(name="봇 버전", value=self.version, inline=True)
-        embed.set_footer(text="한이 봇의 저작권은 Han 개발진에게 있음을 알립니다.")
+        embed.set_footer(text="한이 봇의 저작권은 개발진에게 있음을 알립니다.")
         embed.set_thumbnail(url=self.image)
         return embed
 
@@ -54,8 +54,8 @@ class HAN:
         embed.add_field(name="- 한이야 배우자 [A] / [B]",
                         value="**``한이야 배우자 [A] / [B]``**는 나에게 단어를 가르쳐줄 수 있는 멍령어야! \n이걸로 저에게 단어를 가르칠 수 있어! \n" +
                               "(나한태 이상한거 가르치면 죽어 ㅡ3ㅡ)\n\n" +
-                              "[ 사용 예시 : ``한이야 배우자 유냉면 / 맛 업성...`` ] \n" +
-                              "``유저 : 유냉면, 한이 : 맛 업성...`` \n" + self._line, inline=False)
+                              "[ 사용 예시 : ``한이야 배우자 냉면 / 맛있어!!!`` ] \n" +
+                              "``유저 : 냉면, 한이 : 맛있어!!!.`` \n" + self._line, inline=False)
 
         embed.add_field(name="- 한이야 링크 & 디스코드",
                         value="**``한이야 링크 & 디스코드``**는 내가 만들어지는 커뮤니티로 들어갈 수 있는 링크를 주는 명령어야!\n\n" +
@@ -77,11 +77,11 @@ class HAN:
         embed = discord.Embed(title="잘못된 형식이야!", description="그렇게로는 날 가르칠 수 없어!", color=self.color)
         embed.add_field(name="사용법", value="""
         **한이야 배우자 [배울 말] / [답변할 말]**
-        이렇게 입력해야되!
+        이렇게 입력해야돼!
 
         **[ 예시 ]**
-        한이야 배우자 유냉면 / 맛 없어...
-        User: 한이야 유냉면
-        Bot: 맛 없어...""", inline=False)
+        한이야 배우자 냉면 / 맛있어!!!
+        User: 한이야 냉면
+        한이: 맛있어!!!""", inline=False)
         embed.set_thumbnail(url=self.image)
         return embed
