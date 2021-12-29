@@ -2,22 +2,28 @@ import discord
 
 
 class HAN:
+
     # 서버 url
-    # 이미지 url
-    # 퍼스널 컬러
-    # 버전
     url = "https://discord.gg/YKnrnffqEP"
+
+    # 이미지 url
     image = "https://cdn.discordapp.com/attachments/810130135437017088/810374859028824096/123_20210214135940.png"
+
+    # 퍼스널 컬러
     color = 0x70ABE1
+
+    # 버전
     version = "beta 1.0"
 
+    # 출력용 라인
     _line = "**--------------------------------------**"
 
     def __init__(self):
         pass
 
+    # 한이 개발 정보를 임베드 형태로 변환하여 반환
     def info(self):
-        # 한이 개발 정보를 임베드 형태로 변환
+
         embed = discord.Embed(title="한이 프로필", description="내 정보들을 알려줄게!\n", color=self.color)
         embed.add_field(name="개발자", value=self._line, inline=False)
         embed.add_field(name="코딩", value="**포로(주, 최적화)**\n**에브(보조, 아이디어)**", inline=True)
@@ -33,8 +39,9 @@ class HAN:
         embed.set_thumbnail(url=self.image)
         return embed
 
+    # 서버정보를 임베드 형태로 변환하여 반환
     def server(self, message, username):
-        # 서버정보를 임베드 형태로 반환
+
         embed = discord.Embed(title="디스코드 방 정보", description="서버의 정보들을 알려줄게!\n", color=self.color)
         embed.add_field(name="방 생성일자:", value=message.guild.created_at, inline=True)
         embed.add_field(name="멤버 수:", value=message.guild.member_count, inline=False)
@@ -43,8 +50,9 @@ class HAN:
         embed.set_footer(text="발신자: " + username)
         return embed
 
+    # 한이의 명령 목록을 임베드 형태로 변환하여 반환
     def help(self):
-        # 한이의 명령 목록을 임베드 형태로 반환
+
         embed = discord.Embed(title="명령어 목록", description="나랑 대화 하고 놀려면 명령어 정도는 알아야겠지~? \n여기 도움말이야!", color=self.color)
         embed.add_field(name="- 한이야 [A]",
                         value="**``한이야 [A]``**는 나랑 소통하기 위한 기본 **접두사**!\n" +
@@ -73,7 +81,9 @@ class HAN:
         embed.set_thumbnail(url=self.image)
         return embed
 
+    # 배우기 실패 시 오류메시지를 임베드 형식으로 반환
     def learn_error_msg(self):
+
         embed = discord.Embed(title="잘못된 형식이야!", description="그렇게로는 날 가르칠 수 없어!", color=self.color)
         embed.add_field(name="사용법", value="""
         **한이야 배우자 [배울 말] / [답변할 말]**
