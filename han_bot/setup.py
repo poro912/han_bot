@@ -28,13 +28,11 @@ for i in files:
 	sys.path.append(path + "\\" + i)
 	print(path + "\\" + i)
 
-
 # 파일 시스템 임포트
 # from Excl import *
 # from Option import *
 # from Admin import *
 from Token import Token
-
 
 # 여기에 토큰 타입을 명시하면 해당하는 토큰을 가져옴 "origin" "test"
 token_type = "test"
@@ -53,15 +51,20 @@ async def on_ready():
 	await client.change_presence(status=discord.Status.online, activity=discord.Game("'한이야 도움말' 입력! / 제작 이음, 포로"))
 
 
-# 디스코드 상에 메세지가 입력되면 해당 부분을 실행한다.
+# 디스코드에 메세지가 전송되면 해당 부분을 실행한다.
+# 디스코드 상의 처리에 대한 내용을 정의해놨다.
 @client.event
 async def on_message(message):
-	# 만약 문장의 시작에 "한이"라는 단어가 있을 경우
+	# 메시지의 출처가 봇이라면 처리를 종료한다.
+	# 트래픽 과다, 봇 공격을 막기 위한 코드
+	if message.author.bot:
+		return None
+
+	# 문장의 시작에 "한이"라는 단어가 있을 경우
 	# 한이 명령으로 판단하여 처리를 시작한다.
-	# 한이의 주요 처리부 이다.
 	if message.content.startswith("한이"):
 
-		# message 객체를 갖고 process로 이동하여 처리한다.
+		# message 객체를 갖고 process.py의 han_process로 이동하여 처리한다.
 		# 이 때 처리가 가능한 문장이였다면 문자열 또는 임베드 형식으로 반환받는다.
 		retmsg = process.han_process(message)
 
@@ -91,6 +94,7 @@ async def on_message(message):
 	elif message.content.startswith("admin"):
 		pass
 
+
 '''
 Token.set_token()
 global test_token
@@ -101,7 +105,6 @@ client.run(Token.ret_token(token_type))
 myToken = Token.Tokens()
 myToken.set()
 client.run(myToken.get(token_type))
-
 
 # await message.channel.send("우씨... 나 말 안해!😡");
 # message_submit(message);

@@ -2,26 +2,26 @@ import discord
 
 
 class HAN:
-
-    # 서버 url
+    # 한이의 대표 서버의 url
     url = "https://discord.gg/YKnrnffqEP"
 
-    # 이미지 url
+    # 한이의 대표 이미지 url
     image = "https://cdn.discordapp.com/attachments/810130135437017088/810374859028824096/123_20210214135940.png"
 
-    # 퍼스널 컬러
+    # 한이의 퍼스널 컬러
     color = 0x70ABE1
 
-    # 버전
+    # 현재 버전
     version = "beta 1.0"
 
-    # 출력용 라인
+    # 출력용 구분선
     _line = "**--------------------------------------**"
 
-    def __init__(self):
-        pass
-
-    # 한이 개발 정보를 임베드 형태로 변환하여 반환
+    # @brief    한이의 개발 정보를 임베드 형태로 반환
+    # @details  한이의 사진, 각 처부별 담당자, 제작 날짜,
+    # @details  제작정보, 사용 언어, 상세 정보, 봇 이름, 봇 버전
+    # @details  등의 세부 내용을 임베드 형태로 반환한다.
+    # @return   embed
     def info(self):
 
         embed = discord.Embed(title="한이 프로필", description="내 정보들을 알려줄게!\n", color=self.color)
@@ -39,7 +39,10 @@ class HAN:
         embed.set_thumbnail(url=self.image)
         return embed
 
-    # 서버정보를 임베드 형태로 변환하여 반환
+    # @brief    현재 서버의 정보를 임베드 형태로 반환
+    # @details  현재 한이가 속해있는 서버의 정보
+    # @details  서버 이름, 방 정보, 멤버의 수 등을 임베드 형태로 반환한다.
+    # @return   embed
     def server(self, message, username):
 
         embed = discord.Embed(title="디스코드 방 정보", description="서버의 정보들을 알려줄게!\n", color=self.color)
@@ -50,7 +53,9 @@ class HAN:
         embed.set_footer(text="발신자: " + username)
         return embed
 
-    # 한이의 명령 목록을 임베드 형태로 변환하여 반환
+    # @brief    한이의 명령어 목록을 임베드 형태로 반환
+    # @details  한이 사용시에 쓸 수 있는 명령어들의 목록을 임베드 형태로 반환한다.
+    # @return   embed
     def help(self):
 
         embed = discord.Embed(title="명령어 목록", description="나랑 대화 하고 놀려면 명령어 정도는 알아야겠지~? \n여기 도움말이야!", color=self.color)
@@ -81,7 +86,9 @@ class HAN:
         embed.set_thumbnail(url=self.image)
         return embed
 
-    # 배우기 실패 시 오류메시지를 임베드 형식으로 반환
+    # @brief    배우자 명령어 실패 시 출력할 임베드 형태
+    # @details  배우자 명령어가 실패한 경우에 예시를 보여주기위해 해당 임베드를 반환한다.
+    # @return   embed
     def learn_error_msg(self):
 
         embed = discord.Embed(title="잘못된 형식이야!", description="그렇게로는 날 가르칠 수 없어!", color=self.color)
@@ -95,3 +102,6 @@ class HAN:
         한이: 맛있어!!!""", inline=False)
         embed.set_thumbnail(url=self.image)
         return embed
+
+
+han = HAN()

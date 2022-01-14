@@ -1,41 +1,61 @@
-import discord
-import asyncio
-import han_info
-
-info = han_info.HAN();
+# import discord
+# import asyncio
+from han_info import han
 
 
-# 반환형태는 무조건 임베드
+# info = han_info.HAN();
+
+# @brief    가장 앞의'한이', '한이야' 단어 삭제
+# @details  문자열에서 가장 앞에 오는 '한이', '한이야' 단어를 삭제한다.
+# @param    strign target_msg
+# return    string으로 반환한다.
+def delete_startswitch(target_msg):
+    target_msg = target_msg.strip()
+    # 문장에서 한이야 라는 단어로 시작하면 해당 단어를 제거한다.
+    if target_msg.startswith("한이야"):
+        target_msg = target_msg.replace("한이야", "", 1)
+    # 문장에서 한이 라는 단어로 시작하면 해당 단어를 제거한다.
+    elif target_msg.startswith("한이"):
+        target_msg = target_msg.replace("한이", "", 1)
+
+    # 문장의 앞과 뒤의 공백을 제거하고 반환한다.
+    return target_msg.strip()
+
+
+# han_process
+# @brief    한이 on_message 에서의 처리를 위한 프로세스
+# details   한이가 받아온 사용자의 메세지를 여기에서 전부 처리하여 반환한다.
+# details   한이의 응답, 서버 정보, 정보, 도움말, 디스코드, 배우자 에 관한 기능을 처리한다.
+# @param    message message
+# @return   embed 또는 string으로 서버에 보낼 메세지를 반환한다.
 def han_process(message):
+    # 받아온 mescsage 객체에서 사용자가 입력한 문장을
+    # org_msg(original_message) 변수에 저장  메시지 원본
+    org_msg = message.content
 
-    # 받아온 message 객체에서 문장정보를 뽑아온다.
-    # 뽑은 문장 정보에서 "한이야" 및 "한이" 단어를 앞에서부터 하나 지운다.
-    msg_orgin = message.content
-    msg = message.content
-    msg = msg.replace("한이야", "", 1)
-
-    # 만약 문자열의 길이 변화가 없었다면 "한이야" 라는 단어가 없는 것 으로 "한이" 단어를 지운다.
-    if len(msg_orgin) == len(msg):
-        msg = msg.replace("한이", "", 1)
-
-    # 처리한 문자열의 처음과 끝에 있는 공백을 제거한다.
-    msg = msg.strip()
+    # prc_msg(process_message) 변수에 저장   처리될 메시지
+    # '한이', '한이야' 단어를 제거하여 prc_msg 에 저장한다.
+    prc_msg = delete_startswitch(org_msg)
 
     # 콘솔에 처리된 내용을 출력한다.
-    print(message.content +" / "+ msg)
+    print(org_msg + " / " + prc_msg)
 
-    # 처리에 따라 임베드 객체 또는 문자열을 반환한다.
-    if msg[:4] == "서버정보":
-        return info.server(message, str(message.author.id))
-    elif msg[:2] == "정보":
-        return info.info()
-    elif msg[:3] == "도움말":
-        return info.help()
-    elif msg[:4] == "디스코드" or msg[:4] == "링크주소":
-        return info.url
-    elif msg[:3] == "배우자":
+    # 명령어에 대하여 동작하는 코드이다.
+    # 명령의 결과를 문자열 또는 임베드 형태로 반환한다.
+    if prc_msg.startswith("서버정보"):
+        return han.server(message, str(message.author.id))
+
+    elif prc_msg.startswith("정보"):
+        return han.info()
+
+    elif prc_msg.startswith("도움말"):
+        return han.help()
+
+    elif prc_msg.startswith("디스코드") or prc_msg.startswith("링크주소") or prc_msg.startswith("링크"):
+        return han.url
+
+    elif prc_msg.startswith("배우자") or prc_msg.startswith("배워"):
         return "배우기 기능은 아직 작성중이야"
-        pass
-    else:
-        pass
+
+    # None 을 반환하면 에러를 발생시키므로 예외처리 구문이 필요하다.
     return None
