@@ -1,7 +1,7 @@
 # import discord
 # import asyncio
 from han_info import han
-
+from Excel.Excel_File_IO import QA_file
 
 # info = han_info.HAN();
 
@@ -56,10 +56,17 @@ def han_process(message):
 
     elif prc_msg.startswith("배우자") or prc_msg.startswith("배워"):
         return "배우기 기능은 아직 작성중이야"
+   
+    elif prc_msg.startswith("테스트"):
+        QA_file.open()
+        print(QA_file.qna_space["A1"].value)
+        QA_file.close()
+        return "테스트"
+    
     else:
         return "질문에 대한 문장이야"
 
     # else 문장에서 답변할 게 없다면 None 반환
     # None 을 반환하면 에러를 발생시키므로 예외처리 구문이 필요하다.
-
+    
     return None
