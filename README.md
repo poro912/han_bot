@@ -18,8 +18,6 @@
 
 기술 도움<br/>
 ckfejrdld <br/>
-<br/>
-
 <hr>
 
 지인들과 토이프로젝트형식으로 짧게 개발해보고자 만들게된 프로그램 입니다.<br>
@@ -32,7 +30,7 @@ ckfejrdld <br/>
 <br/>
 
 사용 모듈<br>
-discord, os, sys, process, openpyxl<br><br>
+discord, os, sys, process, openpyxl<br><hr>
 
 2021/01/16 한이 프로필<br><br>
 ![한이](https://user-images.githubusercontent.com/40479447/153008515-5eaaa9a9-54e7-4513-8ef5-91b302c038d0.png)
