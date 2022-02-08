@@ -5,6 +5,7 @@
 <br/>
 초기버전 링크 : https://github.com/poro912/han<br/>
 <br/>
+<hr>
 
 기획<br/>
 유네 (Discord  냉면#0001)<br/>
@@ -33,20 +34,20 @@ discord, os, sys, process, openpyxl<br><br>
 
 2021/01/16 한이 프로필<br><br>
 ![한이](https://user-images.githubusercontent.com/40479447/153008515-5eaaa9a9-54e7-4513-8ef5-91b302c038d0.png)
-<br><br>
+<br><hr>
 
 2021/02/14 한이 프로필<br><br>
 ![127_20210221203230_1](https://user-images.githubusercontent.com/40479447/153008800-c345f1fd-dba5-412a-b23b-2a8970f3bb2e.png)
-<br><br>
+<br><hr>
 
 2021/04/16 한이 프로필<br><br>
 ![EzD1eFuVUAEXJU3_1](https://user-images.githubusercontent.com/40479447/153010943-431f8703-f18f-4097-9c63-b468f009951f.png)
-<br><br>
+<br><hr>
 
 2021/05/17 한이 프로필<br><br>
 ![68_1](https://user-images.githubusercontent.com/40479447/153008580-a9e170ce-8b18-460d-bd00-f54ecc12427a.png)
-<br><br>
+<br><hr>
 
 2021/09/21 한이 프로필<br><br>
 ![29_2_11_1](https://user-images.githubusercontent.com/40479447/153009046-d2302714-d9a2-483d-8b3d-487b30ee0716.png)
-<br><br>
+<br><hr>
