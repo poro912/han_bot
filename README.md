@@ -40,7 +40,7 @@ discord, os, sys, process, openpyxl<br><br>
 <br><br>
 
 2021/04/16 한이 프로필<br><br>
-![127_20210221203230_1](https://user-images.githubusercontent.com/40479447/153010462-6a9e615c-3e99-4380-bad7-cde1efd92177.png)
+![EzD1eFuVUAEXJU3_1](https://user-images.githubusercontent.com/40479447/153010943-431f8703-f18f-4097-9c63-b468f009951f.png)
 <br><br>
 
 2021/05/17 한이 프로필<br><br>
