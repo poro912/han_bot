@@ -6,7 +6,7 @@
 <br/>
 
 기획<br/>
-유네 (discord  냉면#0001)<br/>
+유네 (Discord  냉면#0001)<br/>
 
 디자인<br/>
 사과머리 (qwerseoa1234@gmail.com)<br/>
