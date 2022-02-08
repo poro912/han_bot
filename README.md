@@ -34,14 +34,18 @@ ckfejrdld <br/>
 사용 모듈<br>
 discord, os, sys, process, openpyxl<br>
 
-2021/02/14 한이 프로필 사진<br>
-![127_20210221203230](https://user-images.githubusercontent.com/40479447/153002067-ba0cc3f9-57de-44e8-8ec2-5328990ba166.png)
-<br>
-
-2021/05/17<br>
-![68](https://user-images.githubusercontent.com/40479447/153006694-22f157bb-042c-40f7-8924-82f759e2480d.png)
+2021/01/16 한이 프로필<br><br>
+![한이](https://user-images.githubusercontent.com/40479447/153008515-5eaaa9a9-54e7-4513-8ef5-91b302c038d0.png)
 
 
+2021/02/14 한이 프로필<br><br>
+![127_20210221203230_1](https://user-images.githubusercontent.com/40479447/153008800-c345f1fd-dba5-412a-b23b-2a8970f3bb2e.png)
 
-2021/09/21 한이 프로필 사진<br>
-![29_2_11](https://user-images.githubusercontent.com/40479447/153002327-1e7f19fc-8dbb-419f-be9e-fdbb6192ba08.png)
+
+2021/05/17 한이 프로필<br><br>
+![68_1](https://user-images.githubusercontent.com/40479447/153008580-a9e170ce-8b18-460d-bd00-f54ecc12427a.png)
+
+
+2021/09/21 한이 프로필<br><br>
+![29_2_11_1](https://user-images.githubusercontent.com/40479447/153009046-d2302714-d9a2-483d-8b3d-487b30ee0716.png)
+
