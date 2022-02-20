@@ -6,7 +6,7 @@ from Excel.Excel_File_IO import QA_file
 # info = han_info.HAN();
 
 # @brief    가장 앞의'한이', '한이야' 단어 삭제
-# @details  문자열에서 가장 앞에 오는 '한이', '한이야' 단어를 삭제한다.
+# @detail  문자열에서 가장 앞에 오는 '한이', '한이야' 단어를 삭제한다.
 # @param    strign target_msg
 # return    string으로 반환한다.
 def delete_startswitch(target_msg):
@@ -24,8 +24,8 @@ def delete_startswitch(target_msg):
 
 # han_process
 # @brief    한이 on_message 에서의 처리를 위한 프로세스
-# details   한이가 받아온 사용자의 메세지를 여기에서 전부 처리하여 반환한다.
-# details   한이의 응답, 서버 정보, 정보, 도움말, 디스코드, 배우자 에 관한 기능을 처리한다.
+# detail   한이가 받아온 사용자의 메세지를 여기에서 전부 처리하여 반환한다.
+# detail   한이의 응답, 서버 정보, 정보, 도움말, 디스코드, 배우자 에 관한 기능을 처리한다.
 # @param    message message
 # @return   embed 또는 string으로 서버에 보낼 메세지를 반환한다.
 def han_process(message):
